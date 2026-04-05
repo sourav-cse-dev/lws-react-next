@@ -13,7 +13,7 @@ totalPriceElement.innerText = `Total: ৳ ${totalPrice}`
 
 // event listeners
 addToCartButtonElement.addEventListener('click', () => {
-    totalPrice += productPrice;
+    totalPrice += productPrice; // totalPrice = totalPrice + productPrice
 
     // update UI
     totalPriceElement.innerText = `Total: ৳ ${totalPrice}`
