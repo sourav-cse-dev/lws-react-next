@@ -1,4 +1,5 @@
-# Why React? — Vanilla JS vs React.js
+# 1.1 Introduction to React
+# Why React? — Vanilla JS vs React.js 
 
 ## What is React?
 **Answer:** React is a JavaScript library focused on building user interfaces.
