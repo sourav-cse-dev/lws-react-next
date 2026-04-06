@@ -11,15 +11,15 @@ increment = 0;
 let container = document.querySelector(".container");
 
 // fast
-// while (increment < 10000) {
-//     array.push(++increment);
-// }
+while (increment < 10000) {
+  array.push(++increment);
+}
 
-// container.innerHTML = array.join(" ");
+container.innerHTML = array.join(" ");
 
 // slow
 
-while (increment < 10000) {
-  increment++;
-  container.innerHTML += " " + increment;
-}
+// while (increment < 10000) {
+//   increment++;
+//   container.innerHTML += " " + increment;
+// }
