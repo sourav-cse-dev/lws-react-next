@@ -1,9 +1,9 @@
-import First from "./components/first-component/First";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
     <div>
-      <First></First>
+      <Gallery />
     </div>
   );
 }
