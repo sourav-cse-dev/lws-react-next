@@ -1,23 +1,35 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Why React - Vanilla JS vs React.js</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="./images/favicon.png" rel="shortcut icon" />
-    </head>
-    <body class="bg-slate-900 text-slate-400 flex items-center justify-center h-screen px-10">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why React - Vanilla JS vs React.js</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./images/favicon.png" rel="shortcut icon" />
+  </head>
+  <body
+    class="bg-slate-900 text-slate-400 flex items-center justify-center h-screen px-10"
+  >
+    <div class="justify-center gap-4">
+      <div id="root-1"></div>
+      <div class="border border-yellow-900"></div>
+      <div id="root-2"></div>
+      <div class="border border-yellow-900"></div>
+      <div id="root-3"></div>
+      <div class="border border-yellow-900"></div>
+      <div id="root-4"></div>
+    </div>
 
-        <div id="root-1"></div>
-        <div id="root-2"></div>
-        <div id="root-3"></div>
-        <div id="root-4"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-        <script defer type="text/babel" src="./reactScript.js"></script>
-    </body>
+    <script defer type="text/babel" src="./reactScript.js"></script>
+  </body>
 </html>
