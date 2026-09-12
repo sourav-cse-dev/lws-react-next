@@ -38,9 +38,11 @@ Add what is missing for the topic to be complete: concepts they skipped, edge ca
 
 ## Step 4 — Link the JavaScript foundations
 
-React concepts usually rest on a core JavaScript concept, and confusion about the React half is often really confusion about the JS half. Where that applies, add a **🔗 JavaScript Prerequisites** section: a one-line reminder of the JS concept plus a link to `module-0/js-refresher/README.md`.
+React concepts usually rest on a core JavaScript concept, and confusion about the React half is often really confusion about the JS half. Where that applies, add a **🔗 JavaScript Prerequisites** section: a one-line reminder of the JS concept, naming the note that covers it.
 
-Read `references/js-prerequisites.md` for the topic→prerequisite map and the relative-link depths.
+**Every link in a note must stay inside that note's own folder.** Refer to notes in other folders by path as plain text — `` `module-0/js/js-refresher` note `` — never as a `../` markdown link. Folders in this repo get reorganized (`module-0/js-refresher/` became `module-0/js/js-refresher/`, silently breaking every note that linked to it), and a note whose links rot is worse than one that just names its neighbour. In-folder links are fine and encouraged: images, source files, anything under the topic folder itself.
+
+Read `references/js-prerequisites.md` for the topic→prerequisite map.
 
 If the prerequisite is **not yet covered** in the js-refresher note, say so in chat so they can go add it.
 
@@ -120,7 +122,7 @@ component কোথায় data পাল্টাচ্ছে সেটা �
 ## 🔗 JavaScript Prerequisites
 
 - **Object destructuring:** `{ name, role }` আসলে object থেকে property বের করে আনার JS syntax —
-  React-এর নিজস্ব কিছু নয়। → [js-refresher](../../../module-0/js-refresher/README.md)
+  React-এর নিজস্ব কিছু নয়। → `module-0/js/js-refresher` note
 ````
 
 Notice what happened: all three original points survive as full sections, each gained an analogy plus the *why*, the code came from their own folder, and the destructuring point pulled in its JS foundation.

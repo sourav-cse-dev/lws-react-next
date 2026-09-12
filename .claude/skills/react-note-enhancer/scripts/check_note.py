@@ -87,16 +87,25 @@ def check_ratio(text, errors, warnings, info):
 
 
 def check_links(text, path, errors, info):
-    base = path.parent
+    # Links must stay inside the note's own folder. Cross-folder ../ links rot
+    # whenever a folder is reorganized, and markdown never warns about it —
+    # name other notes as plain-text paths instead.
+    base = path.parent.resolve()
     checked = 0
     for label, target in LINK.findall(strip_code(text)):
         target = target.split("#")[0].strip()
         if not target or target.startswith(("http://", "https://", "mailto:")):
             continue
         checked += 1
-        if not (base / target).resolve().exists():
+        resolved = (base / target).resolve()
+        if not resolved.is_relative_to(base):
+            errors.append(
+                f"Link escapes this folder: [{label}]({target}) — "
+                "reference other notes as plain-text paths instead"
+            )
+        elif not resolved.exists():
             errors.append(f"Broken relative link: [{label}]({target})")
-    info.append(f"Relative links checked: {checked}")
+    info.append(f"In-folder links checked: {checked}")
 
 
 def check_headings(text, errors, warnings):

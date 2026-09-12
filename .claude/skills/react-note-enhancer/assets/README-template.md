@@ -47,7 +47,11 @@ Everything below the line is the template.
 
 ## 🔗 JavaScript Prerequisites
 
-- **<JS concept>:** <এক-দুই লাইনে মনে করানো> → [js-refresher](../../../module-0/js-refresher/README.md)
+- **<JS concept>:** <এক-দুই লাইনে মনে করানো> → `module-0/js/js-refresher` note
+
+<!-- Links must stay inside this folder. Name notes in other folders as plain
+     text paths, never as ../ links — folders move and those links rot. -->
+
 
 ---
 

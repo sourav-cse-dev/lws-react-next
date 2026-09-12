@@ -29,13 +29,14 @@ Use this map in **Step 4** of the skill. Pick only the rows that the topic actua
 
 Anything outside that list — closures, Promises/`async-await`, the event loop, array methods, destructuring, spread/rest, modules — is **not yet documented**. When a topic needs one of those, still add the prerequisite section, but tell the user in chat that the js-refresher note needs that section written.
 
-## Relative link depth
+## How to reference the js-refresher note
 
-Links are written from the topic's `README.md`, so the depth depends on nesting:
+**Never link to it with a `../` path.** Name it as plain text instead:
 
-| Note location | Link to js-refresher |
-| --- | --- |
-| `module-1/1.5/import-export/README.md` | `../../../module-0/js-refresher/README.md` |
-| `module-0/git-github-refresher/README.md` | `../js-refresher/README.md` |
+```markdown
+- **Object destructuring:** <এক-দুই লাইনে মনে করানো> → `module-0/js/js-refresher` note
+```
 
-Count the directories between the note and the repo root, then descend into `module-0/js-refresher/`. Verify before writing — a broken link in a note the user rereads months later is worse than no link.
+The reason is concrete: `module-0/js-refresher/` was moved to `module-0/js/js-refresher/`, which silently broke the link in every note that pointed at it — markdown gives no warning, and the rot is only found by accident months later. Plain-text paths survive reorganization, and the reader can still find the file.
+
+Links **inside** the note's own folder are fine and encouraged — images, source files, subfolders. `scripts/check_note.py` flags any link that escapes the folder.
