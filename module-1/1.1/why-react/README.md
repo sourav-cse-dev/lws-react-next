@@ -347,8 +347,8 @@ ReactDOM.createRoot(document.getElementById("root-4")).render(
 ## 🔗 JavaScript Prerequisites
 
 - **Array destructuring:** `const [quantity, setQuantity] = React.useState(0)` — এই `[a, b]` লেখাটা React-এর নিজস্ব কিছু নয়, এটা array থেকে মান বের করে আনার **JavaScript syntax**। `useState` আসলে দুই element-এর একটা array return করে। ⚠️ এটি এখনো js-refresher-এ লেখা হয়নি।
-- **Callback function & function reference:** `addEventListener('click', () => {...})` এবং `onClick={addToCart}` — দুটোই function-কে **value হিসেবে** পাঠানোর উদাহরণ। → [js-refresher](../../../module-0/js-refresher/README.md)
-- **`let` vs `const`:** `script.js`-এ `let totalPrice` (বদলায়) আর `const productPrice` (বদলায় না) — কেন এই পার্থক্য, তা এখানে দেখা যায়। → [js-refresher](../../../module-0/js-refresher/README.md)
+- **Callback function & function reference:** `addEventListener('click', () => {...})` এবং `onClick={addToCart}` — দুটোই function-কে **value হিসেবে** পাঠানোর উদাহরণ। → `module-0/js/js-refresher` note
+- **`let` vs `const`:** `script.js`-এ `let totalPrice` (বদলায়) আর `const productPrice` (বদলায় না) — কেন এই পার্থক্য, তা এখানে দেখা যায়। → `module-0/js/js-refresher` note
 - **Template literals:** `` `Total: ৳ ${totalPrice}` `` — backtick দিয়ে string-এর ভেতরে value বসানো।
 
 ---
