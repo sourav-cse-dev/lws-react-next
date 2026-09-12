@@ -1,0 +1,45 @@
+{
+  "skill_name": "react-note-enhancer",
+  "notes": "Test prompts for iterating on this skill via skill-creator. Outputs are prose notes, so grading is mostly qualitative — the objective assertions below are the ones scripts/check_note.py can verify mechanically.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "rough-draft-preservation",
+      "prompt": "amar 1.6 er props README ta ekta draft kore rekhechi, oita enhance kore dao",
+      "expected_output": "Every bullet from the rough draft survives as a section in the enhanced note, expanded with a Bangla explanation, an analogy, and a code example drawn from the actual files in the topic folder. A JavaScript Prerequisites section links object destructuring back to module-0/js-refresher.",
+      "assertions": [
+        "Every original bullet from the draft is still present in some form",
+        "Bangla prose ratio measures between 45% and 80%",
+        "Technical terms (props, state, component, render) remain in English",
+        "Note references at least one real filename from the topic folder",
+        "Contains 5-6 interview questions written in English",
+        "check_note.py exits 0"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "factually-wrong-point-flagged",
+      "prompt": "enhance this note - i wrote that props can be changed by the child component if you use setState inside it",
+      "expected_output": "The note carries the corrected explanation (props are read-only; changes belong in the parent's state), AND the chat reply explicitly tells the user their point was wrong and why. The wrong claim is not silently deleted without comment.",
+      "assertions": [
+        "Note contains the correct read-only explanation",
+        "Chat reply explicitly flags the misconception and explains why it is wrong",
+        "The correction is surfaced in chat, not only silently fixed in the file"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "english-heavy-tooling-topic",
+      "prompt": "write the readme for the install-react folder",
+      "expected_output": "A tooling topic where most content is legitimately English (npm commands, config keys, extension names). The skill should not pad the note with filler Bangla to hit the ratio; it should explain the setup steps in Bangla where explanation is actually needed and say in chat that the ratio is low for a valid reason.",
+      "assertions": [
+        "Bangla is used for explanation of why steps matter, not mechanically inserted",
+        "No filler Bangla added purely to move the ratio",
+        "Chat reply acknowledges the ratio is legitimately low for a tooling topic"
+      ],
+      "files": []
+    }
+  ]
+}
