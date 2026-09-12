@@ -178,7 +178,7 @@ totalPriceElement.innerText = `Total: ৳ ${totalPrice}`;   // U — DOM object-
 
 এখানে তুমি DOM object-এর একটা property-তে নতুন মান বসিয়ে দিচ্ছ, আর browser সাথে সাথে screen-এ সেটা দেখাচ্ছে। **DOM manipulation** বলতে ঠিক এটাকেই বোঝায়।
 
-> 🔗 পরে React-এ গিয়ে দেখবে, React এই DOM-টা সরাসরি না ধরে আগে একটা **Virtual DOM** ব্যবহার করে — কারণ বারবার আসল DOM বদলালে browser-কে বারবার layout আর paint করতে হয়, যা ব্যয়বহুল। বিস্তারিত আছে [1.3 virtual-dom](../../../../module-1/1.3/virtual-dom/README.md) note-এ।
+> 🔗 পরে React-এ গিয়ে দেখবে, React এই DOM-টা সরাসরি না ধরে আগে একটা **Virtual DOM** ব্যবহার করে — কারণ বারবার আসল DOM বদলালে browser-কে বারবার layout আর paint করতে হয়, যা ব্যয়বহুল। বিস্তারিত আছে `module-1/1.3/virtual-dom` note-এ।
 
 ---
 
@@ -194,9 +194,9 @@ totalPriceElement.innerText = `Total: ৳ ${totalPrice}`;   // U — DOM object-
 
 ## 🔗 JavaScript Prerequisites
 
-- **Object, property ও method:** DOM-এর পুরো ধারণাটাই object-এর উপর দাঁড়ানো — element একটা object, `id` তার property, `addEventListener()` তার method। → [js-refresher](../../js-refresher/README.md)
-- **Function reference vs function call:** `addEventListener("click", hello)` — এখানে `hello` লেখা হয়েছে, `hello()` নয়। বন্ধনী দিলে function টা তখনই চলে যেত, আর তার return value (`undefined`) handler হিসেবে বসত। → [js-refresher](../../js-refresher/README.md)
-- **Scope:** `window` হলো browser-এর global scope — global variable আসলে `window`-এরই property হয়ে যায়। → [js-refresher](../../js-refresher/README.md)
+- **Object, property ও method:** DOM-এর পুরো ধারণাটাই object-এর উপর দাঁড়ানো — element একটা object, `id` তার property, `addEventListener()` তার method। → `module-0/js/js-refresher` note
+- **Function reference vs function call:** `addEventListener("click", hello)` — এখানে `hello` লেখা হয়েছে, `hello()` নয়। বন্ধনী দিলে function টা তখনই চলে যেত, আর তার return value (`undefined`) handler হিসেবে বসত। → `module-0/js/js-refresher` note
+- **Scope:** `window` হলো browser-এর global scope — global variable আসলে `window`-এরই property হয়ে যায়। → `module-0/js/js-refresher` note
 
 ---
 
