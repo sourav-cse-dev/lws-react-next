@@ -316,7 +316,7 @@ VS Code-এ `rfc` লিখে Tab চাপলেই পুরো functional co
 
 - **ES Modules (`import` / `export`):** `main.jsx`-এর `import { StrictMode } from "react"` (named import) আর `import App from "./App.jsx"` (default import) — এই পার্থক্যটাই পরের দিকে `1.5`-এ বিস্তারিত আসবে। ⚠️ এটি এখনো js-refresher-এ লেখা হয়নি।
 - **`export default`:** `App.jsx`-এর শেষ line — একটি file থেকে একটিই default export দেওয়া যায়। ⚠️ js-refresher-এ নেই।
-- **Function declaration:** `function App() { ... }` — component আসলে সাধারণ JavaScript function, এর বেশি কিছু নয়। → [js-refresher](../../../module-0/js-refresher/README.md)
+- **Function declaration:** `function App() { ... }` — component আসলে সাধারণ JavaScript function, এর বেশি কিছু নয়। → `module-0/js/js-refresher` note
 
 ---
 
